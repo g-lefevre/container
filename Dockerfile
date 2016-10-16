@@ -19,3 +19,8 @@ RUN apk add --no-cache gcc g++ make libc-dev apache-ant python-dev git && \
 EXPOSE 8080 6653
 
 CMD java -jar target/floodlight.jar
+
+ARG VCS_REF
+
+  LABEL org.label-schema.vcs-ref=$VCS_REF \
+        org.label-schema.vcs-url="https://github.com/g-lefevre/docker-floodlight"

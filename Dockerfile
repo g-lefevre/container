@@ -20,5 +20,5 @@ EXPOSE 8080 6653
 
 CMD java -jar target/floodlight.jar
 
-  LABEL org.label-schema.vcs-ref=`git rev-parse --short HEAD` \
+  LABEL org.label-schema.vcs-ref="git rev-parse --short HEAD" \
         org.label-schema.vcs-url="https://github.com/g-lefevre/docker-floodlight"

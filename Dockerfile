@@ -13,8 +13,11 @@ RUN apk add --no-cache gcc g++ make libc-dev apache-ant python-dev git && \
     ant && \
     mkdir /var/lib/floodlight && \
     chmod 777 /var/lib/floodlight && \
+    rm /floodlight/src/main/resources/floodlightdefault.properties
     apk del git apache-ant gcc make python-dev libc-dev g++ maven && \
     rm -rf /var/cache/apk/*
+
+COPY floodlightdefault.properties /floodlight/src/main/resources/
 
 EXPOSE 8080 6653
 

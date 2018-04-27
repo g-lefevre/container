@@ -20,7 +20,7 @@ Floodlight is traditionally used in conjunction with applications on top of it (
 
 ## How to use it ?
 ### Run container
-`docker run -d -p 6653:6653 -p 8080:8080 --name=floodlight glefevre/alpine-floodlight`
+`docker run -d -p 6653:6653 -p 8080:8080 --name=floodlight glefevre/floodlight`
 
 ### Call firewall API
 `curl http://localhost:8080/wm/firewall/module/status/json` 
